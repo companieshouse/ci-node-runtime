@@ -1,6 +1,7 @@
-FROM 416670754337.dkr.ecr.eu-west-2.amazonaws.com/ci-core-runtime:1.0.0
+ARG CORE_VERSION="latest"
+FROM 416670754337.dkr.ecr.eu-west-2.amazonaws.com/ci-core-runtime:${CORE_VERSION}
 
-ARG NODE_VERSION=latest
+ARG NODE_VERSION=18.12.1
 ARG NPM_VERSION=8.19.2
 
 RUN dnf update -y && \
