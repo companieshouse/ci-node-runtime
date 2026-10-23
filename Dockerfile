@@ -5,7 +5,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl --silent --location https://rpm.nodesource.com/setup_24.x  | bash - && \
     dnf install -y  \
     nodejs-24.22.1 \
-    unzip \
-    zip && \
+    unzip-6.0 \
+    zip-3.0 && \
     dnf update -y && \
     dnf clean all
